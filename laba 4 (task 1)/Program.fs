@@ -57,9 +57,6 @@ let rec readChar prompt =
 
 [<EntryPoint>]
 let main argv =
- 
-
-    
     let count = readInt "Введите количество строк: " 
                     (fun x -> x > 0)   
                     "Ошибка: введите положительное целое число."
