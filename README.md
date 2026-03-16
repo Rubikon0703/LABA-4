@@ -19,7 +19,7 @@
 
 Новое дерево выводится на экран.
 ### Тестирование
-[!past image task%201.png ](https://github.com/Rubikon0703/LABA-4/blob/main/скриншоты/task%201.png)
+![pasted image task%201.png ](https://github.com/Rubikon0703/LABA-4/blob/main/скриншоты/task%201.png)
 # Задание 2
 ## Задача 1
 
