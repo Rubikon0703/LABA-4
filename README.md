@@ -42,7 +42,7 @@
 Итоговый список чётных элементов выводится на экран.
 
 ### Тестирование
-![pasted image task%202.png](https://github.com/Rubikon0703/LABA-4/blob/main/скриншоты/task%202png)
+![pasted image task%202.png](https://github.com/Rubikon0703/LABA-4/blob/main/скриншоты/task%202.png)
 
 
 
