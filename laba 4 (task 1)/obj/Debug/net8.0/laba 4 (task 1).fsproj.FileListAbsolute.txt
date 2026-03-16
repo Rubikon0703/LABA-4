@@ -56,3 +56,4 @@ C:\Users\sterh\source\repos\LABA 4\laba 4 (task 1)\obj\Debug\net8.0\refint\laba 
 C:\Users\sterh\source\repos\LABA 4\laba 4 (task 1)\obj\Debug\net8.0\laba 4 (task 1).pdb
 C:\Users\sterh\source\repos\LABA 4\laba 4 (task 1)\obj\Debug\net8.0\laba 4 (task 1).genruntimeconfig.cache
 C:\Users\sterh\source\repos\LABA 4\laba 4 (task 1)\obj\Debug\net8.0\ref\laba 4 (task 1).dll
+C:\Users\sterh\source\repos\LABA 4\laba 4 (task 1)\obj\Debug\net8.0\laba 4 (task 1).sourcelink.json
