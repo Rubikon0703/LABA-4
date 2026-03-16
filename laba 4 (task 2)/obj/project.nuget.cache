@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qQi0kyXepSU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sterh\\source\\repos\\LABA 4\\laba 4 (task 2)\\laba 4 (task 2).fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sterh\\.nuget\\packages\\fsharp.core\\9.0.303\\fsharp.core.9.0.303.nupkg.sha512"
+  ],
+  "logs": []
+}

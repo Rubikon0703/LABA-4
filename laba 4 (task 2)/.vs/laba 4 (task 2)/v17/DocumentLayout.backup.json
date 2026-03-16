@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sterh\\source\\repos\\LABA 4\\laba 4 (task 2)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55E17560-8280-4483-ADBD-345444AFBD3C}|laba 4 (task 2).fsproj|c:\\users\\sterh\\source\\repos\\laba 4\\laba 4 (task 2)\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{55E17560-8280-4483-ADBD-345444AFBD3C}|laba 4 (task 2).fsproj|solutionrelative:program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.fs",
+              "DocumentMoniker": "C:\\Users\\sterh\\source\\repos\\LABA 4\\laba 4 (task 2)\\Program.fs",
+              "RelativeDocumentMoniker": "Program.fs",
+              "ToolTip": "C:\\Users\\sterh\\source\\repos\\LABA 4\\laba 4 (task 2)\\Program.fs",
+              "RelativeToolTip": "Program.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-16T14:07:36.812Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
