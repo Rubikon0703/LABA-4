@@ -13,14 +13,24 @@ let rec insert value tree =
         else tree
 
 let fromList values = 
-        List.fold (fun acc v -> insert v acc) Empty values
+    List.fold (fun acc v -> insert v acc) Empty values
 
 let rec toList tree =
     match tree with
     | Empty -> []
     | Node (v,left,right)->(toList left) @ [v] @ (toList right)
 
-let print tree = printfn "Содержимое дерева: %A" (toList tree)
+let rec printTreeIndent indent tree =
+    match tree with
+    | Empty -> ()
+    | Node (v, left, right) ->
+        printTreeIndent (indent + "    ") right
+        printfn "%s%O" indent v
+        printTreeIndent (indent + "    ") left
+
+let print tree =
+    printfn "Дерево:"
+    printTreeIndent "" tree
 
 let rec map f tree =
     match tree with
@@ -35,7 +45,6 @@ let generateRandomString minLen maxLen =
     let len = random.Next(minLen, maxLen + 1)
     let chars = 
         Array.init len (fun _ -> char (random.Next(97, 123))) 
-        // 'a'..'z'
     String chars
 
 let rec readInt prompt (validator: int -> bool) errorMsg =
@@ -57,9 +66,6 @@ let rec readChar prompt =
 
 [<EntryPoint>]
 let main argv =
- 
-
-    
     let count = readInt "Введите количество строк: " 
                     (fun x -> x > 0)   
                     "Ошибка: введите положительное целое число."
@@ -70,13 +76,11 @@ let main argv =
                     (fun x -> x >= minLen) 
                     "максимальная длина меньше минимальной."
 
-   
     let strings =   
         List.init count     
             (fun _ -> generateRandomString minLen maxLen)
     printfn "\nСгенерированный список строк: %A" strings
 
-  
     let originalTree = fromList strings
     printfn "\nИсходное дерево:"
     print originalTree

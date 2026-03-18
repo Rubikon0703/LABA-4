@@ -15,12 +15,17 @@ let rec insert value tree =
 let fromList values =  
     List.fold (fun acc v -> insert v acc) Empty values
 
-let rec toList tree =
+let rec printTreeIndent indent tree =
     match tree with
-    | Empty -> []
-    | Node (v,left,right)->(toList left) @ [v] @ (toList right)
+    | Empty -> ()
+    | Node (v, left, right) ->
+        printTreeIndent (indent + "    ") right
+        printfn "%s%O" indent v
+        printTreeIndent (indent + "    ") left
 
-let print tree = printfn "Содержимое дерева: %A" (toList tree)
+let print tree =
+    printfn "Дерево:"
+    printTreeIndent "" tree
 
 let rec foldTree f acc tree =
     match tree with
@@ -30,10 +35,34 @@ let rec foldTree f acc tree =
         let accNode = f v accLeft
         foldTree f accNode right
 
-let getEvenElements tree =
-    foldTree (fun x acc -> if x % 2 = 0 then 
-                            x :: acc else acc) [] tree
-    |> List.rev
+
+let rec toList tree =
+    match tree with
+    | Empty -> []
+    | Node (v, left, right) ->
+        (toList left) @ [v] @ (toList right)
+
+let getEvenElementsViaTreeFold tree =
+    let rec collectEven tree acc =
+        match tree with
+        | Empty -> acc
+        | Node (v, left, right) ->
+            let accAfterLeft = collectEven left acc
+            let accAfterCurrent = 
+                if v % 2 = 0 then 
+                    List.fold (fun accList x -> x :: accList) accAfterLeft [v]
+                else accAfterLeft
+            collectEven right accAfterCurrent
+    
+    collectEven tree [] |> List.rev
+
+let getEvenElementsViaListFold tree =
+    tree
+    |> toList  
+    |> List.fold (fun acc x -> 
+        if x % 2 = 0 then x :: acc  
+        else acc) []
+    |> List.rev  
 
 
 let random = Random ()
@@ -66,6 +95,8 @@ let main argv =
     let tree = fromList numbers
     printfn "\nИсходное дерево:"
     print tree
-    let evens = getEvenElements tree
-    printfn "\nСписок чётных элементов: %A" evens
+    let evens1 = getEvenElementsViaTreeFold tree
+    let evens2 = getEvenElementsViaListFold tree
+    printfn "\nСписок чётных элементов: %A" evens1
+    printfn "\nСписок чётных элементов: %A" evens2
     0
