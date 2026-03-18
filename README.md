@@ -21,7 +21,7 @@
 
 Новое дерево выводится на экран
 ### Тестирование
-
+![pasted image task%201.png](https://github.com/Rubikon0703/LABA-4/blob/main/скриншоты/task%201.png)
 # Задание 2
 ## Задача 1
 
@@ -42,7 +42,7 @@
 Итоговый список чётных элементов выводится на экран.
 
 ### Тестирование
-
+![pasted image task%202.png](https://github.com/Rubikon0703/LABA-4/blob/main/скриншоты/task%202.png)
 
 
 
